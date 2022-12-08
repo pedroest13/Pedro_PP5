@@ -4,13 +4,19 @@ Pedro Esteban
 Refinando código
 Publicaremos un codigo refinado a Github
 """
+import sys
+
 
 
 def costs_list():
     archivo2 = open('gift_costs.txt', 'r')
     gift_costs = list(archivo2)
-    gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
-    archivo2.close()  # cerrar el archivo después de usarlo y no ser necesario
+    try:
+      gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
+      archivo2.close()  # cerrar el archivo después de usarlo y no ser necesario
+    except ValueError: 
+      print('Tienes que poner digitos')
+      sys.exit()
     return gift_costs
 
 
@@ -31,3 +37,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+  
