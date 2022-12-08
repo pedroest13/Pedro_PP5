@@ -6,8 +6,6 @@ Publicaremos un codigo refinado a Github
 """
 import sys
 
-
-
 def costs_list():
     archivo2 = open('gift_costs.txt', 'r')
     gift_costs = list(archivo2)
