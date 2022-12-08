@@ -2,14 +2,14 @@
 Pedro Esteban
 22-0209
 Refinando código
-Estaremos publicando un codigo de Github el cual sera refinado.
+Publicaremos un codigo refinado a Github
 """
 
 
 def costs_list():
     archivo2 = open('gift_costs.txt', 'r')
     gift_costs = list(archivo2)
-    gift_costs = [int(c) for c in gift_costs]  # convierte los strings a int
+    gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
     archivo2.close()  # cerrar el archivo después de usarlo y no ser necesario
     return gift_costs
 
